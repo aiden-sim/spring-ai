@@ -7,13 +7,14 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-open class McpServerConfig {
+open class McpServerConfig(
+    private val weatherTools: WeatherTools
+) {
 
     @Bean
-    open fun weatherToolCallbackProvider(weatherTools: WeatherTools): ToolCallbackProvider {
+    open fun weatherToolCallbackProvider(): ToolCallbackProvider {
         return MethodToolCallbackProvider.builder()
             .toolObjects(weatherTools)
             .build()
     }
 }
-

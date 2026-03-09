@@ -9,6 +9,8 @@ spring:
           model: gpt-4o
     mcp:
       client:
+        toolcallback:
+          enabled: true
         sse:
           connections:
             mcp-server:
@@ -16,4 +18,3 @@ spring:
 
 server:
   port: 8080
-
