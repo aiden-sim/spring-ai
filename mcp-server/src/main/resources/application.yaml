@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: mcp-server
+  ai:
+    mcp:
+      server:
+        name: mcp-server
+        version: 1.0.0
+        sse-message-endpoint: /mcp/message
+        sse-endpoint: /mcp/sse
+
+server:
+  port: 8081
